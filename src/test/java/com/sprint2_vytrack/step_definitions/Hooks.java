@@ -3,9 +3,9 @@ package com.sprint2_vytrack.step_definitions;
 
 
 
-import com.project_name.utilities.BrowserUtils;
-import com.project_name.utilities.ConfigurationReader;
-import com.project_name.utilities.Driver;
+import com.sprint2_vytrack.utilities.BrowserUtils;
+import com.sprint2_vytrack.utilities.ConfigurationReader;
+import com.sprint2_vytrack.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
