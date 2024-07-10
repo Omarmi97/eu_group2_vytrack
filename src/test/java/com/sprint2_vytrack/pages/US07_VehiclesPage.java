@@ -19,8 +19,11 @@ public class US07_VehiclesPage {
     @FindBy(xpath = "(//span[@class='title title-level-2'])[3]")
     public WebElement vehicles;
 
-    @FindBy(css = "input[type='checkbox']")
+    @FindBy(xpath = "(//button[@class='btn btn-default btn-small dropdown-toggle'])[1]")
     public  List<WebElement> checkboxes;
+
+    @FindBy(xpath = "(//button[@class='btn btn-default btn-small dropdown-toggle'])[1]/input")
+    public WebElement firstcheckbox;
 
 
 
