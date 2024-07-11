@@ -38,7 +38,7 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
-    @FindBy(xpath = "//span[.='Accounts']")
+    @FindBy(xpath = "//a[.='Accounts']")
     public WebElement accountsButton;
 
     public BasePage() {
