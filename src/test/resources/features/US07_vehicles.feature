@@ -10,13 +10,13 @@ Feature: Library vehicles feature
     Given  the user is on the login page
 
 
-@vehicle_sales_manager
+@vehicle_sales_manager_unchecked
   Scenario: Verify all checkboxes are unchecked on Vehicles page
   Given the user logged in as "sales manager"
   Then user is on the Vehicles page
   Then user should see all checkboxes as unchecked
 
-  @vehicle_store_manager
+  @vehicle_store_manager_unchecked
   Scenario: Verify all checkboxes are unchecked on Vehicles page
     Given the user logged in as "store manager"
     Then user is on the Vehicles page
@@ -36,10 +36,19 @@ Feature: Library vehicles feature
     Then the user clicks the first checkbox
     Then all cars should be selected
 
+@randomCarSelected_sales_manager
+  Scenario: Select a vehicle from the Vehicles page
+    Given the user logged in as "sales manager"
+    When user is on the Vehicles page
+  Then user select the vehicle with driver "AAA"
+  Then the driver "AAA" should be selected
 
+  @randomCarSelected_store_manager
   Scenario: Select a vehicle from the Vehicles page
     Given the user logged in as "store manager"
     When user is on the Vehicles page
-    Then I select the vehicle with checkbox
-    Then the vehicle should be selected
+    Then user select the vehicle with driver "AAA"
+    Then the driver "AAA" should be selected
+
+
 
