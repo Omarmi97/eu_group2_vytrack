@@ -23,7 +23,7 @@ public class US07_VehiclesPage {
     @FindBy(xpath = "//input[@type='checkbox']")
     public  List<WebElement> checkboxes;
 
-    @FindBy(xpath = "(//button[@class='btn btn-default btn-small dropdown-toggle'])[1]/input")
+    @FindBy(xpath = "//div[@class='btn-group dropdown']//input[1]")
     public WebElement firstcheckbox;
 
     @FindBy(xpath = "//tr[@class='grid-row row-selected']")
@@ -32,7 +32,7 @@ public class US07_VehiclesPage {
     @FindBy(xpath = "//tr[@class ='grid-row row-click-action']//td[4]")
     public List<WebElement> driverNames;
 
-    @FindBy(xpath = "//tr[@class ='grid-row row-click-action']//td[.='AAA']")
+    @FindBy(xpath = "//tr[@class ='grid-row row-click-action']//td[.='Martin Upton']")
     public WebElement selectedDriver;
 
 

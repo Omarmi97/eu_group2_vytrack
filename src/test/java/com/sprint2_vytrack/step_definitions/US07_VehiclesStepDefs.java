@@ -61,7 +61,6 @@ public class US07_VehiclesStepDefs {
 
         for (WebElement checkbox : us07_vehiclesPage.checkboxRows) {
 
-
             if (!checkbox.isSelected()) {
                 throw new AssertionError("Not all cars are selected");
             }
