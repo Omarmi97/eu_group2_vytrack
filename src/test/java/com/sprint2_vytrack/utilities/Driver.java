@@ -63,15 +63,15 @@ public class Driver {
      */
     public static void closeDriver(){
         if (driverPool.get()!=null){
-            /*
-            This line will terminate the currently existing driver completely. It will not exist going forward.
+           /*
+           This line will terminate the currently existing driver completely. It will not exist going forward.
              */
-            driverPool.get().quit();
+           driverPool.get().quit();
             /*
-            We assign the value back to "null" so that my "singleton" can create a newer one if needed.
-             */
-            driverPool.remove();
+           We assign the value back to "null" so that my "singleton" can create a newer one if needed.
+            */
+           driverPool.remove();
         }
-    }
+  }
 
 }
