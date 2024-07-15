@@ -14,9 +14,11 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/sprint2_vytrack/step_definitions",
         dryRun = false,
-        tags = "@firstCheckBox_sales_manager",
+        tags = "@wip",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
+
+
 
 
