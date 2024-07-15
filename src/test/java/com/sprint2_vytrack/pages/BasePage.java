@@ -39,6 +39,9 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
+    @FindBy(xpath = "//a[.='Accounts']")
+    public WebElement accountsButton;
+
     public BasePage() {
 
         PageFactory.initElements(Driver.getDriver(), this);
