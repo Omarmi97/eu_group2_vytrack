@@ -9,7 +9,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 
-
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +46,7 @@ public class US12_AccountsFilteringSteps {
     @Then("user should see the following 8 filter items:")
     public void user_should_see_the_following_filter_items(List<String> filters) {
 
-
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         List<WebElement> dropDown = Driver.getDriver().findElements(By.xpath("//div[@class='filter-item oro-drop']"));
         List<String> dropDownItems = new ArrayList<>();
 
