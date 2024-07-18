@@ -7,6 +7,7 @@ import com.sprint2_vytrack.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,32 +15,37 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class US010_CreateEvent_Step_Defs {
 
     US010_CalendarEventsPage us010_calendarEventsPage = new US010_CalendarEventsPage();
-    @When("driver navigates to the Activities tab")
-    public void driver_navigates_to_the_activities_tab() {
+
+    @When("user navigates to the Activities tab")
+    public void user_navigates_to_the_activities_tab() {
         us010_calendarEventsPage.waitUntilLoaderScreenDisappear();
-    // us010_calendarEventsPage.navigateToActivitiesTab();
+        // us010_calendarEventsPage.navigateToActivitiesTab();
         BrowserUtils.sleep(5);
         BrowserUtils.hover(us010_calendarEventsPage.activitiesTab);
     }
-    @When("driver clicks on Calendar Events")
-    public void driver_clicks_on_calendar_events() {
+
+    @When("user clicks on Calendar Events")
+    public void user_clicks_on_calendar_events() {
         us010_calendarEventsPage.clickCalendarEvent();
 
     }
-    @When("driver clicks on Create Calendar Event")
-    public void driver_clicks_on_create_calendar_event() {
+
+    @When("user clicks on Create Calendar Event")
+    public void user_clicks_on_create_calendar_event() {
         us010_calendarEventsPage.waitUntilLoaderScreenDisappear();
         us010_calendarEventsPage.clickCreateCalendarEvent();
 
     }
-    @When("driver checks the Repeat checkbox")
-    public void driver_checks_the_repeat_checkbox() throws InterruptedException {
+
+    @When("user checks the Repeat checkbox")
+    public void user_checks_the_repeat_checkbox() throws InterruptedException {
         Thread.sleep(3000);
         us010_calendarEventsPage.setRepeatCheckBox();
 
     }
-    @When("driver enters {string} in the Description")
-    public void driver_enters_in_the_description(String string) {
+
+    @When("user enters {string} in the Description")
+    public void user_enters_in_the_description(String string) {
         us010_calendarEventsPage.waitUntilLoaderScreenDisappear();
         Driver.getDriver().switchTo().frame(0);
 
@@ -48,8 +54,13 @@ public class US010_CreateEvent_Step_Defs {
 
     }
 
+    @Then("the event {string} should be displayed")
+    public void theEventShouldBeDisplayed(String arg0) {
+        us010_calendarEventsPage.eventdiscription;
+    }
+/*
     @And("sales manager clicks on Create Calendar Event")
-    public void salesManagerClicksOnCreateCalendarEvent() {
+   public void salesManagerClicksOnCreateCalendarEvent() {
 
     }
 
@@ -96,5 +107,8 @@ public class US010_CreateEvent_Step_Defs {
     }
 
 }
+}
 
+ */
 
+}

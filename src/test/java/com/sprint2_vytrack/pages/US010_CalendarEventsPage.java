@@ -22,41 +22,43 @@ public class US010_CalendarEventsPage extends BasePage {
     public WebElement clickCreateCalendarEvent;
 
 
-
     @FindBy(className = "controls")
     public WebElement repeatCheckBox;
 
     @FindBy(xpath = "(//html/body/p[.=''])[1]")
-   public WebElement description;
+    public WebElement description;
 
-     //  @FindBy(xpath = "")
-     //  public WebElement eventList;
+    @FindBy(tagName= "p")
+    public WebElement eventdiscription;
 
-   // public void navigateToActivitiesTab() {
-      //  activitiesTab.click();
+    // public void navigateToActivitiesTab() {
+    //  activitiesTab.click();
 
 
-   // }
+    // }
 
-    public void clickCalendarEvent(){
+    public void clickCalendarEvent() {
         calendarEvents.click();
     }
-    public void clickCreateCalendarEvent(){
+
+    public void clickCreateCalendarEvent() {
         clickCreateCalendarEvent.click();
     }
 
 
-    public void setRepeatCheckBox(){
+    public void setRepeatCheckBox() {
         repeatCheckBox.click();
     }
-    public void enterDescription(String string){
+
+    public void enterDescription(String string) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-       wait.until(ExpectedConditions.visibilityOf(description)).sendKeys(string);
-    }
-  //  public void isEventDisplayed(){
-    //    eventList.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(description)).sendKeys(string);
     }
 
+    public void isEventDisplayed() {
+        eventdiscription.isDisplayed();
+    }
+}
 
 
 
