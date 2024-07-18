@@ -1,3 +1,4 @@
+@B34G2-207
 Feature: Accounts' page filters
   As a user, I want to filter customers’ info on the Accounts page.
 
@@ -7,7 +8,7 @@ Feature: Accounts' page filters
     Given  the user is on the login page
 
 
-  @sales_manager_filter
+  @B34G2-204
   Scenario: Verify that users see 8 filter items on the Accounts page
     Given the user logged in as "sales manager"
     Then  user clicks the option Accounts under the menu option Customers
@@ -24,7 +25,7 @@ Feature: Accounts' page filters
       | Updated At: All    |
 
 
-  @store_manager_filter
+  @B34G2-205
   Scenario: Verify that users see 8 filter items on the Accounts page
     Given the user logged in as "store manager"
     Then  user clicks the option Accounts under the menu option Customers
@@ -40,7 +41,7 @@ Feature: Accounts' page filters
       | Created At: All    |
       | Updated At: All    |
 
-  @driver_account_filter
+  @B34G2-206
   Scenario: Verify that users see 8 filter items on the Accounts page
     Given the user logged in as "driver"
     Then  user clicks the option Accounts under the menu option Customers
