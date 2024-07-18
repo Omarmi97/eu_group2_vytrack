@@ -41,7 +41,7 @@ public class US07_VehiclesStepDefs {
     public void user_should_see_all_checkboxes_as_unchecked() {
 
         for (WebElement checkbox : us07_vehiclesPage.checkboxes) {
-
+           // BrowserUtils.waitFor(2);
             Assert.assertFalse(checkbox.isSelected());
 
         }
@@ -64,7 +64,7 @@ public class US07_VehiclesStepDefs {
             if (!checkbox.isSelected()) {
                 throw new AssertionError("Not all cars are selected");
             }
-//            BrowserUtils.waitFor(5);
+            BrowserUtils.waitFor(2);
             assertTrue(checkbox.isSelected());
         }
 

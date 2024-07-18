@@ -23,7 +23,7 @@ public class US07_VehiclesPage {
     @FindBy(xpath = "//input[@type='checkbox']")
     public  List<WebElement> checkboxes;
 
-    @FindBy(xpath = "//div[@class='btn-group dropdown']//input[1]")
+    @FindBy(xpath = "//div[@class='btn-group dropdown']//input")
     public WebElement firstcheckbox;
 
     @FindBy(xpath = "//tr[@class='grid-row row-selected']")
