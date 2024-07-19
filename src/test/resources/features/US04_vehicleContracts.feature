@@ -1,3 +1,4 @@
+@wip
 Feature: Access vehicle contracts page
 
   User Story:
@@ -27,9 +28,9 @@ Feature: Access vehicle contracts page
   @driver
   Scenario: Verify that Drivers can NOT access the Vehicle Contracts
     Given the user logged in as "driver"
-    When the user click Fleet to see the vehicle contracts page
-    And  the user click into vehicle contracts page
-    Then the user see the message "You do not have permission to perform this action."
+    When the driver click Fleet to see the vehicle contracts page
+    And  the driver click into vehicle contracts page
+    Then the driver see the prompt message
 
 
 

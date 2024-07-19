@@ -19,6 +19,9 @@ public class US04_ContractsPage extends BasePage{
     @FindBy(xpath = "//span[text()='Vehicle Contracts']")
     public WebElement driverVehicleContracts;
 
+    @FindBy (xpath = "(//div[@class='message'])[2]")
+    public WebElement promptMessage;
+
 
 
 }
