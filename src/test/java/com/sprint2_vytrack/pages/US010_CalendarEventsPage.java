@@ -15,7 +15,10 @@ public class US010_CalendarEventsPage extends BasePage {
     @FindBy(xpath = "(//span[@class='title title-level-1'])[3]")
     public WebElement activitiesTab;
 
-    @FindBy(css = "[data-route='oro_calendar_event_index']")
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[5]")
+    public WebElement activitiesSales;
+
+    @FindBy(xpath = "//li[@data-route='oro_calendar_event_index']")
     public WebElement calendarEvents;
 
     @FindBy(css = "a.btn.main-group.btn-primary.pull-right[title='Create Calendar event']")
@@ -25,17 +28,19 @@ public class US010_CalendarEventsPage extends BasePage {
     @FindBy(className = "controls")
     public WebElement repeatCheckBox;
 
+    @FindBy(xpath = "//input[starts-with(@id,\"recurrence-repeat\")]")
+    public WebElement repeatCheckBox1;
+
+
     @FindBy(xpath = "(//html/body/p[.=''])[1]")
     public WebElement description;
 
     @FindBy(tagName= "p")
     public WebElement eventdiscription;
 
-    // public void navigateToActivitiesTab() {
-    //  activitiesTab.click();
+    @FindBy(xpath= "//body[@id='tinymce']/p")
+    public WebElement eventdiscription1;
 
-
-    // }
 
     public void clickCalendarEvent() {
         calendarEvents.click();

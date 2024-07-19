@@ -16,18 +16,10 @@ public class US010_CreateEvent_Step_Defs {
 
     US010_CalendarEventsPage us010_calendarEventsPage = new US010_CalendarEventsPage();
 
-    @When("user navigates to the Activities tab")
-    public void user_navigates_to_the_activities_tab() {
+    @When("the user navigates to the {string} - {string}")
+    public void theUserNavigatesToThe(String activitiesTab , String calendarModule) {
         us010_calendarEventsPage.waitUntilLoaderScreenDisappear();
-        // us010_calendarEventsPage.navigateToActivitiesTab();
-        BrowserUtils.sleep(5);
-        BrowserUtils.hover(us010_calendarEventsPage.activitiesTab);
-    }
-
-    @When("user clicks on Calendar Events")
-    public void user_clicks_on_calendar_events() {
-        us010_calendarEventsPage.clickCalendarEvent();
-
+        us010_calendarEventsPage.navigateToModule(activitiesTab,calendarModule);
     }
 
     @When("user clicks on Create Calendar Event")
@@ -38,9 +30,9 @@ public class US010_CreateEvent_Step_Defs {
     }
 
     @When("user checks the Repeat checkbox")
-    public void user_checks_the_repeat_checkbox() throws InterruptedException {
-        Thread.sleep(3000);
-        us010_calendarEventsPage.setRepeatCheckBox();
+    public void user_checks_the_repeat_checkbox() {
+        us010_calendarEventsPage.waitUntilLoaderScreenDisappear();
+        us010_calendarEventsPage.repeatCheckBox1.click();
 
     }
 
@@ -50,65 +42,11 @@ public class US010_CreateEvent_Step_Defs {
         Driver.getDriver().switchTo().frame(0);
 
         us010_calendarEventsPage.enterDescription(string);
-
-
-    }
-
-    @Then("the event {string} should be displayed")
-    public void theEventShouldBeDisplayed(String arg0) {
-        us010_calendarEventsPage.eventdiscription;
-    }
-/*
-    @And("sales manager clicks on Create Calendar Event")
-   public void salesManagerClicksOnCreateCalendarEvent() {
+        Assert.assertEquals(string,us010_calendarEventsPage.eventdiscription1.getText());
 
     }
 
-    @When("sales manager navigates to the Activities tab")
-    public void salesManagerNavigatesToTheActivitiesTab() {
-        us010_calendarEventsPage.waitUntilLoaderScreenDisappear();
-    }
 
-    @And("sales manager clicks on Calendar Events")
-    public void salesManagerClicksOnCalendarEvents() {
-    }
 
-    @And("sales manager checks the Repeat checkbox")
-    public void salesManagerChecksTheRepeatCheckbox() {
-    }
-
-    @When("sales manager enters {string} in the Description")
-    public void salesManagerEntersInTheDescription(String arg0) {
-    }
-
-    @When("store manager navigates to the Activities tab")
-    public void storeManagerNavigatesToTheActivitiesTab() {
-    }
-
-    @And("store manager clicks on Calendar Events")
-    public void storeManagerClicksOnCalendarEvents() {
-    }
-
-    @And("store manager clicks on Create Calendar Event")
-    public void storeManagerClicksOnCreateCalendarEvent() {
-    }
-
-    @And("store manager checks the Repeat checkbox")
-    public void storeManagerChecksTheRepeatCheckbox() {
-    }
-
-    @When("store manager enters {string} in the Description")
-    public void storeManagerEntersInTheDescription(String arg0) {
-    }
-
-    @Then("the event {string} should be displayed")
-    public void the_event_should_be_displayed(String evenList) {
-
-    }
-
-}
-}
-
- */
 
 }
