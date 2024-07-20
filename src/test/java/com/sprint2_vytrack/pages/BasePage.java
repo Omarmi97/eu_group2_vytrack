@@ -5,6 +5,7 @@ package com.sprint2_vytrack.pages;
 
 import com.sprint2_vytrack.utilities.BrowserUtils;
 import com.sprint2_vytrack.utilities.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -38,7 +39,11 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
+    @FindBy(xpath = "//a[.='Accounts']")
+    public WebElement accountsButton;
+
     public BasePage() {
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
