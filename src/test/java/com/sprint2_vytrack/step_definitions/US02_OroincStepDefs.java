@@ -9,11 +9,9 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.Set;
 
-
 public class US02_OroincStepDefs {
     US02_OroincPage us02_oroincPage = new US02_OroincPage();
     WebDriver driver = Driver.getDriver();
-
 
     @Given("user clicks on the question mark icon")
     public void user_clicks_on_the_question_mark_icon() {
@@ -33,10 +31,8 @@ public class US02_OroincStepDefs {
                 newWindowHandle = handle;
                 break;
             }
-
         }
         driver.switchTo().window(newWindowHandle);
-
     }
 
     @And("the user should gets access to the Oroinc Documentation page")
@@ -50,8 +46,6 @@ public class US02_OroincStepDefs {
         } else {
             System.out.println("Failed to access Oroinc Documentation page");
         }
-
     }
-
 
 }

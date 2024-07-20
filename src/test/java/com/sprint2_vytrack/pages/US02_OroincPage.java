@@ -9,11 +9,7 @@ public class US02_OroincPage extends BasePage{
 
     public US02_OroincPage() {
         PageFactory.initElements(Driver.getDriver(), this);
-
     }
-
-
-    @FindBy (className = "fa-question-circle")
+    @FindBy(className = "fa-question-circle")
     public WebElement questionMarkIcon;
-
 }

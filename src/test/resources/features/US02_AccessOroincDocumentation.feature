@@ -13,7 +13,6 @@ Feature: Access to the Oroinc Documentation page
     Then user should switches window handles
     Then the user should gets access to the Oroinc Documentation page
 
-
   @B34G2-220
   Scenario: Verify that the user can access the Oroinc Documentation page by clicking the
   question mark icon
@@ -22,7 +21,6 @@ Feature: Access to the Oroinc Documentation page
     And user clicks on the question mark icon
     Then user should switches window handles
     Then the user should gets access to the Oroinc Documentation page
-
 
   @B34G2-221
   Scenario: Verify that the user can access the Oroinc Documentation page by clicking the
