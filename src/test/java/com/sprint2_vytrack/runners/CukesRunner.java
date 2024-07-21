@@ -15,9 +15,14 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/sprint2_vytrack/step_definitions",
         dryRun = false,
+
         tags = "@B34G2-223",
+        tags = "@storemanager",
+
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
+
+
 
 
